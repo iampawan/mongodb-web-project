@@ -85,6 +85,13 @@ app.get('/', function(req, res){
         var collection = db.collection('events');
         
         collection.find({}).toArray( function (err, results) {
+            if(results.length === 0) {
+                collection.insertMany(events, function(err, results){
+                    console.log(results);
+                    db.close;
+                });
+            }
+            
             res.render('index', {
                 list: ['services','portfolio','events','team','contact'],
                 events: results
