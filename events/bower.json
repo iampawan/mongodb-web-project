@@ -1,0 +1,39 @@
+{
+  "name": "events_app",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "AlohaCode <bretthooper.maui@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/AlohaCode/mongodb-simple-complete",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0"
+  }, 
+    "overrides": {
+        "bootstrap": {
+          "main": [
+            "dist/js/bootstrap.js",
+            "dist/css/bootstrap.min.css",
+            "less/boostrap.less"
+          ] 
+        },
+        "font-awesome": {
+          "main": [
+            "less/font-awesome.less"  ,
+            "css/font-awesome.min.css",
+            "scss/font-awesome.scss"
+          ]
+        }
+    }
+  
+}
