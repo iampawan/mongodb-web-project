@@ -1,0 +1,42 @@
+[
+	{
+		userType: 1,
+		firstName: 'Jack',
+		lastName: 'Johnson',
+		email: 'jack@email.com',
+		password: '123',
+		socialMedia: 'twitter'
+	},
+	{
+		userType: 1,
+		firstName: 'Alicia',
+		lastName: 'Ramon',
+		email: 'alicia@email.com',
+		password: '123',
+		socialMedia: 'facebook'
+	},
+	{
+		userType: 2,
+		firstName: 'Suki',
+		lastName: 'Tasaki',
+		email: 'suki@email.com',
+		password: '123',
+		socialMedia: 'twitter'
+	},
+	{
+		userType: 2,
+		firstName: 'Marco',
+		lastName: 'Valens',
+		email: 'marco@email.com',
+		password: '123',
+		socialMedia: 'facebook'
+	},
+	{
+		userType: 2,
+		firstName: 'Sue',
+		lastName: 'Parsons',
+		email: 'sue@email.com',
+		password: '123',
+		socialMedia: 'gplus'
+	}
+]
