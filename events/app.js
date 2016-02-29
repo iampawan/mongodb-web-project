@@ -96,6 +96,7 @@ app.get('/', function(req, res){
                     db.close;
                 });
             }
+            
             res.render('index', {
                 list: ['services','portfolio','events','team','contact'],
 //              list: ['services','portfolio','events','users','team','contact'],
