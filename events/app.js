@@ -3,10 +3,9 @@ var serveStatic = require('serve-static');
 var mongodb = require('mongodb').MongoClient;
 
 var app = express();
-
 var port =  process.env.PORT;
 
-var events = [  {
+var eventsJson= [  {
                 name: 'Event 1',
                 description: 'The first event',
                 date: '2016.01.01',
@@ -82,23 +81,29 @@ app.set('view engine', 'ejs');
 app.get('/', function(req, res){
     var url = 'mongodb://localhost:27017/eventApp';
     mongodb.connect(url, function(err, db){
-        var collection = db.collection('events');
+        var eventsCol = db.collection('events');
+//      var usersCol = db.collection('users');
+        var usersAll = "[]";
         
-        collection.find({}).toArray( function (err, results) {
+//      usersCol.find({}).toArray( function(err, results) {
+//          usersAll = results;
+//      })
+        
+        eventsCol.find({}).toArray( function (err, results) {
+            if(results.length === 0) {
+                eventsCol.insertMany(eventsJson, function(err, results){
+                    console.log(results);
+                    db.close;
+                });
+            }
             res.render('index', {
                 list: ['services','portfolio','events','team','contact'],
-                events: results
+//              list: ['services','portfolio','events','users','team','contact'],
+                events: results,
+                users: usersAll
             });
         });
-        
-        // FOR INSERTING
-        // collection.insertMany(events, function(err, results){
-        //     console.log(results);
-        //     db.close;
-        // });
     });
-    
-    // res.render('index', {title: 'Aloha World', list: ['services','portfolio','events','team','contact']});
 });
 
 app.get('/events', function(req, res){
