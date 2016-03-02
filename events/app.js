@@ -78,11 +78,15 @@ app.use(serveStatic(__dirname + '/public'));
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
+var registryDox = "[]";
+var zipAggDox = "[]";
+
 // var registryAggregate = function(db, callback){
 //     db.collection('registry').aggregate(
 //         [{"$group" : {"_id" : "$user.email", "attending" : { "$addToSet" : "$event.name" }}}, {"$sort" : {"_id" : 1 }}]
 //     ).toArray(function(err, result) {
 //      console.log(result);
+//      registryDox = result;
 //   });
 // }
 
@@ -95,6 +99,7 @@ app.set('view engine', 'ejs');
 // 		]
 //     ).toArray(function(err, result) {
 //      console.log(result);
+//      zipAggDox = result;
 //   });
 // }
 
@@ -104,6 +109,7 @@ app.get('/', function(req, res){
         var eventsCol = db.collection('events');
 //        var usersCol = db.collection('users');
         var usersAll = "[]";
+        
         
 //        registryAggregate(db, function() { });
 //        zipAggregate(db, function() { });
@@ -124,7 +130,9 @@ app.get('/', function(req, res){
                 list: ['services','portfolio','events','team','contact'],
                 // list: ['services','portfolio','events','users','team','contact'],
                 events: results,
-                users: usersAll
+                users: usersAll,
+                registry: registryDox,
+                zipagg: zipAggDox
             });
         });
     });
