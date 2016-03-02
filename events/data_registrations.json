@@ -1,0 +1,283 @@
+[
+{
+	'event' : {
+                name: 'Event 2',
+                description: 'The second event',
+                date: '2016.02.02',
+                time: '2:00 PM',
+                duration: '2 Hours',
+                location: {
+                    streetAddr: '202 Main St.',
+                    city: 'Los Angeles',
+                    state: 'CA',
+                    zip: '87885',
+                    lon: 0,
+                    lat: 0
+                    },
+                capacity: 200
+    },
+	'user' : {
+		userType: 1,
+		firstName: 'Jack',
+		lastName: 'Johnson',
+		email: 'jack@email.com',
+		password: '123',
+		socialMedia: 'twitter'
+	},
+	registrationDate : '01.20.2016', 
+	cancelDate : ''
+},
+{
+	'event' : {
+                name: 'Event 2',
+                description: 'The second event',
+                date: '2016.02.02',
+                time: '2:00 PM',
+                duration: '2 Hours',
+                location: {
+                    streetAddr: '202 Main St.',
+                    city: 'Los Angeles',
+                    state: 'CA',
+                    zip: '87885',
+                    lon: 0,
+                    lat: 0
+                    },
+                capacity: 200
+    },
+	'user' : {
+		userType: 1,
+		firstName: 'Alicia',
+		lastName: 'Ramon',
+		email: 'alicia@email.com',
+		password: '123',
+		socialMedia: 'facebook'
+	},
+	registrationDate : '01.22.2016', 
+	cancelDate : ''
+},
+{
+	'event' : {
+                name: 'Event 2',
+                description: 'The second event',
+                date: '2016.02.02',
+                time: '2:00 PM',
+                duration: '2 Hours',
+                location: {
+                    streetAddr: '202 Main St.',
+                    city: 'Los Angeles',
+                    state: 'CA',
+                    zip: '87885',
+                    lon: 0,
+                    lat: 0
+                    },
+                capacity: 200
+    },
+	'user' : {
+		userType: 2,
+		firstName: 'Suki',
+		lastName: 'Tasaki',
+		email: 'suki@email.com',
+		password: '123',
+		socialMedia: 'twitter'
+	},
+	registrationDate : '12.29.2015', 
+	cancelDate : ''
+},
+{
+	'event' : {
+	            name: 'Event 1',
+                description: 'The first event',
+                date: '2016.01.01',
+                time: '1:00 PM',
+                duration: '1 Hour',
+                location: {
+                    streetAddr: '101 Main St.',
+                    city: 'Los Angeles',
+                    state: 'CA',
+                    zip: '87885',
+                    lon: 0,
+                    lat: 0
+                    },
+                capacity: 100
+    },
+	'user' : {
+		userType: 2,
+		firstName: 'Suki',
+		lastName: 'Tasaki',
+		email: 'suki@email.com',
+		password: '123',
+		socialMedia: 'twitter'
+	},
+	registrationDate : '12.29.2015', 
+	cancelDate : ''
+},
+{
+	'event' : {
+	            name: 'Event 1',
+                description: 'The first event',
+                date: '2016.01.01',
+                time: '1:00 PM',
+                duration: '1 Hour',
+                location: {
+                    streetAddr: '101 Main St.',
+                    city: 'Los Angeles',
+                    state: 'CA',
+                    zip: '87885',
+                    lon: 0,
+                    lat: 0
+                    },
+                capacity: 100
+    },
+	'user' : {
+		userType: 2,
+		firstName: 'Marco',
+		lastName: 'Valens',
+		email: 'marco@email.com',
+		password: '123',
+		socialMedia: 'facebook'
+	},
+	registrationDate : '02.03.2016', 
+	cancelDate : ''
+},
+{
+	'event' : {
+	            name: 'Event 6',
+                description: 'The sixth event',
+                date: '2016.01.01',
+                time: '1:00 PM',
+                duration: '1 Hour',
+                location: {
+                    streetAddr: '101 Main St.',
+                    city: 'Palm Desert',
+                    state: 'CA',
+                    zip: '87226',
+                    lon: 0,
+                    lat: 0
+                    },
+                capacity: 100
+    },
+	'user' : {
+		userType: 1,
+		firstName: 'Jack',
+		lastName: 'Johnson',
+		email: 'jack@email.com',
+		password: '123',
+		socialMedia: 'twitter'
+	},
+	registrationDate : '01.18.2016', 
+	cancelDate : ''
+},
+{
+	'event' : {
+	            name: 'Event 6',
+                description: 'The sixth event',
+                date: '2016.01.01',
+                time: '1:00 PM',
+                duration: '1 Hour',
+                location: {
+                    streetAddr: '101 Main St.',
+                    city: 'Palm Desert',
+                    state: 'CA',
+                    zip: '87226',
+                    lon: 0,
+                    lat: 0
+                    },
+                capacity: 100
+    },
+	'user' : {
+		userType: 2,
+		firstName: 'Suki',
+		lastName: 'Tasaki',
+		email: 'suki@email.com',
+		password: '123',
+		socialMedia: 'twitter'
+	},
+	registrationDate : '01.03.2016', 
+	cancelDate : ''
+},
+{
+	'event' : {
+	            name: 'Event 6',
+                description: 'The sixth event',
+                date: '2016.01.01',
+                time: '1:00 PM',
+                duration: '1 Hour',
+                location: {
+                    streetAddr: '101 Main St.',
+                    city: 'Palm Desert',
+                    state: 'CA',
+                    zip: '87226',
+                    lon: 0,
+                    lat: 0
+                    },
+                capacity: 100
+    },
+	'user' : {
+		userType: 1,
+		firstName: 'Alicia',
+		lastName: 'Ramon',
+		email: 'alicia@email.com',
+		password: '123',
+		socialMedia: 'facebook'
+	},
+	registrationDate : '01.03.2016', 
+	cancelDate : ''
+},
+{
+	'event' : {
+	            name: 'Event 5',
+                description: 'The fifth event',
+                date: '2016.01.01',
+                time: '1:00 PM',
+                duration: '1 Hour',
+                location: {
+                    streetAddr: '101 Main St.',
+                    city: 'Los Gatos',
+                    state: 'CA',
+                    zip: '87661',
+                    lon: 0,
+                    lat: 0
+                    },
+                capacity: 100
+    },
+	'user' : {
+		userType: 1,
+		firstName: 'Jack',
+		lastName: 'Johnson',
+		email: 'jack@email.com',
+		password: '123',
+		socialMedia: 'twitter'
+	},
+	registrationDate : '01.24.2016', 
+	cancelDate : ''
+},
+{
+	'event' : {
+	            name: 'Event 5',
+                description: 'The fifth event',
+                date: '2016.01.01',
+                time: '1:00 PM',
+                duration: '1 Hour',
+                location: {
+                    streetAddr: '101 Main St.',
+                    city: 'Los Gatos',
+                    state: 'CA',
+                    zip: '87661',
+                    lon: 0,
+                    lat: 0
+                    },
+                capacity: 100
+    },
+	'user' : {
+		userType: 2,
+		firstName: 'Marco',
+		lastName: 'Valens',
+		email: 'marco@email.com',
+		password: '123',
+		socialMedia: 'facebook'
+	},
+	registrationDate : '01.19.2016', 
+	cancelDate : ''
+}
+
+]
