@@ -1,9 +1,9 @@
 {
   "name": "events_app",
-  "description": "",
+  "description": "This is the course project application",
   "main": "app.js",
   "authors": [
-    "AlohaCode <bretthooper.maui@gmail.com>"
+    "AlohaCodeWorks"
   ],
   "license": "ISC",
   "homepage": "https://github.com/AlohaCode/mongodb-simple-complete",
