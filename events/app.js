@@ -81,42 +81,42 @@ app.set('view engine', 'ejs');
 var registryDox = "[]";
 var zipAggDox = "[]";
 
-// var registryAggregate = function(db, callback){
-//     db.collection('registry').aggregate(
-//         [{"$group" : {"_id" : "$user.email", "attending" : { "$addToSet" : "$event.name" }}}, {"$sort" : {"_id" : 1 }}]
-//     ).toArray(function(err, result) {
-//      console.log(result);
-//      registryDox = result;
-//   });
-// }
+var registryAggregate = function(db, callback){
+    db.collection('registry').aggregate(
+        [{"$group" : {"_id" : "$user.email", "attending" : { "$addToSet" : "$event.name" }}}, {"$sort" : {"_id" : 1 }}]
+    ).toArray(function(err, result) {
+     console.log(result);
+     registryDox = result;
+  });
+}
 
-// var zipAggregate = function(db, callback){
-//     db.collection('registry').aggregate(
-//         [    
-//             {"$project" : { "ZIP_CODE" : "$event.location.zip", "EVENT_NAME":"$event.name"}},
-//             {"$group" : {"_id" : "$ZIP_CODE", "Attending" : { "$sum" : 1}}},
-//  		    {"$sort" : {"Attending" : -1 }}
-// 		]
-//     ).toArray(function(err, result) {
-//      console.log(result);
-//      zipAggDox = result;
-//   });
-// }
+var zipAggregate = function(db, callback){
+    db.collection('registry').aggregate(
+        [    
+            {"$project" : { "ZIP_CODE" : "$event.location.zip", "EVENT_NAME":"$event.name"}},
+            {"$group" : {"_id" : "$ZIP_CODE", "Attending" : { "$sum" : 1}}},
+ 		    {"$sort" : {"Attending" : -1 }}
+		]
+    ).toArray(function(err, result) {
+     console.log(result);
+     zipAggDox = result;
+  });
+}
 
 app.get('/', function(req, res){
     var url = 'mongodb://localhost:27017/eventApp';
     mongodb.connect(url, function(err, db){
         var eventsCol = db.collection('events');
-//        var usersCol = db.collection('users');
+        var usersCol = db.collection('users');
         var usersAll = "[]";
         
         
-//        registryAggregate(db, function() { });
-//        zipAggregate(db, function() { });
+        registryAggregate(db, function() { });
+        zipAggregate(db, function() { });
         
-//        usersCol.find({}).toArray( function(err, results) {
-//            usersAll = results;
-//        })
+        usersCol.find({}).toArray( function(err, results) {
+            usersAll = results;
+        });
         
         eventsCol.find({}).toArray( function (err, results) {
             if(results.length === 0) {
@@ -127,8 +127,8 @@ app.get('/', function(req, res){
             }
             
             res.render('index', {
-                list: ['services','portfolio','events','team','contact'],
-                // list: ['services','portfolio','events','users','team','contact'],
+                // list: ['services','portfolio','events','team','contact'],
+                list: ['services','portfolio','events','users','team','contact'],
                 events: results,
                 users: usersAll,
                 registry: registryDox,
